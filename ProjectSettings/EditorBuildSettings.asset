@@ -9,7 +9,7 @@ EditorBuildSettings:
     path: Assets/Scenes/Level Menu.unity
     guid: ad48d52d903382d49879cd7739b59ad5
   - enabled: 1
-    path: Assets/Scenes/Test Scene.unity
+    path: Assets/Scenes/Lost Scene.unity
     guid: 9fc0d4010bbf28b4594072e72b8655ab
   - enabled: 1
     path: Assets/Scenes/stage 1.unity
