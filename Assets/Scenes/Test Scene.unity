@@ -729,7 +729,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 4979280306643196011}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 0}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8b9a305e18de0c04dbd257a21cd47087, type: 3}
   m_Name: 
@@ -6437,6 +6437,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 6172789675215753383, guid: 7e31ba7ca458fa4448d7a09c5f3dcdfa, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8115132996836051163, guid: 7e31ba7ca458fa4448d7a09c5f3dcdfa, type: 3}
       propertyPath: m_Name
       value: MainBird
