@@ -12,6 +12,10 @@ public class VisibilityController : MonoBehaviour
     public GameObject[] hiddenObjects;  // 要显示的物体数组
     public float visibilityDuration = 10.0f;  // 可见持续时间
     public float cooldownDuration = 15.0f; // 冷却持续时间
+
+    public Image visibleUI;
+    public Image cooldownUI;
+
     public TextMeshProUGUI cooldownText; // 冷却时间文本UI
     public TextMeshProUGUI visibilityText;
     private bool isCooldown = false; // 冷却状态标志
@@ -62,6 +66,7 @@ public class VisibilityController : MonoBehaviour
         {
             visibilityTimeLeft -= Time.deltaTime;
             visibilityText.text = "Visibility: " + Mathf.Max(visibilityTimeLeft, 0).ToString("F2") + "s";
+            visibleUI.fillAmount = visibilityTimeLeft / visibilityDuration;
         }
 
         // 更新冷却时间
@@ -69,7 +74,9 @@ public class VisibilityController : MonoBehaviour
         {
             cooldownTimeLeft -= Time.deltaTime;
             cooldownText.text = "Cooldown: " + Mathf.Max(cooldownTimeLeft, 0).ToString("F2") + "s";
+            cooldownUI.fillAmount = cooldownTimeLeft / cooldownDuration;
         }
+
     }
     void SetVisibility(bool isVisible)
     {
@@ -93,6 +100,8 @@ public class VisibilityController : MonoBehaviour
         yield return new WaitForSeconds(cooldownDuration);
         isCooldown = false;
         cooldownText.gameObject.SetActive(false);
+        visibleUI.fillAmount = 1;
+        cooldownUI.fillAmount = 1;
     }
 
 }
